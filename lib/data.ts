@@ -109,7 +109,6 @@ export const skillsData = [
 export const introData = {
   profileImgUrl: "https://media.licdn.com/dms/image/C5603AQH2di4EIARlqQ/profile-displayphoto-shrink_400_400/0/1599249937678?e=1714608000&v=beta&t=1I9syG66G_vhEBNAL2Q5Xd9vZUwkQAOJqMa8knRZ1B0",
   paragraph: "Hello, I'm Ben. I'm Technical Program and Product Manager with 8 years of experience.",
-  aboutMe: "I am a mechatronics engineer with 8+ years of product/program experience. Recently, I have upskilled in modern data science and software development.\nI am recognized for diving deep into complex cross-functional problems, inventing simple incremental solutions, and optimizing delivery roadmaps in both Waterfall and Agile projects.\nAchieving record production KPIs as a Reliability Program Engineer in the energy sector, and automating four partner incentive programs in one year as a Product Manager at AWS are my career highlights.",
   linkedInLink: "https://www.linkedin.com/in/bazampour/",
   githubLink: "https://github.com/Behzad-Az"
 } as const;

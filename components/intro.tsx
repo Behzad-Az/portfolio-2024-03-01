@@ -50,13 +50,13 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.p 
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium sm:text-4xl !leading-[1.5]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         {introData.paragraph}
-      </motion.p>
+      </motion.h1>
 
       <motion.div 
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
