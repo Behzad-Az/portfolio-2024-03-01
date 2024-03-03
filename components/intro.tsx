@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { introData } from "@/lib/data";
@@ -10,9 +10,21 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section";
+
 export default function Intro() {
+  const {ref, inView} = useInView({ threshold: 0.75 });
+  const { setActiveSection, timeOfLastNavClick } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastNavClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastNavClick]);
+
   return (
-    <section id="home" className="max-w-[50rem] text-center scroll-mt-96">
+    <section ref={ref} id="home" className="max-w-[50rem] text-center scroll-mt-96">
       
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -59,7 +71,7 @@ export default function Intro() {
           Hello, I'm Ben.{" "}
         </span>
         <span>
-          I'm a{" "} 
+          Welcome to my page! I'm a{" "} 
         </span>
         <span className="font-bold">
           Technical Product and Program Manager{" "}

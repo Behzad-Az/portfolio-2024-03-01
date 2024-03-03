@@ -1,20 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import SectionHeader from "./section-header";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section";
 
 export default function AboutMe() {
+  const {ref, inView} = useInView({ threshold: 0.75 });
+  const { setActiveSection, timeOfLastNavClick } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastNavClick > 1000) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection, timeOfLastNavClick]);
+
   return (
-    <motion.section 
+    <motion.section
+      ref={ref}
       id="about"
       className="max-w-[45rem] text-center leading-7 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
     >
-      <h2 className="text-3xl font-medium capitalize mb-8">
-        About Me
-      </h2>
+      <SectionHeader>About Me</SectionHeader>
       <p className="mb-3">
         <span>
           I am a mechatronics engineer with{" "}
