@@ -15,7 +15,24 @@ export default function AboutMe() {
         About Me
       </h2>
       <p className="mb-3">
-        I am a mechatronics engineer with 8+ years of product/program experience. Recently, I have upskilled in modern data science and software development.
+        <span>
+          I am a mechatronics engineer with{" "}
+        </span>
+        <span className="font-medium">
+          8+ years of technical product and program experience.{" "}
+        </span>
+        <span>
+          Recently, I have upskilled in{" "}
+        </span>
+        <span className="font-medium">
+          modern data science{" "}
+        </span>
+        <span>
+          and{" "}
+        </span>
+        <span className="font-medium">
+          software development.
+        </span>
       </p>
       <p className="mb-3">
         I am recognized for diving deep into complex cross-functional problems, inventing simple incremental solutions, and optimizing delivery roadmaps in both Waterfall and Agile projects.

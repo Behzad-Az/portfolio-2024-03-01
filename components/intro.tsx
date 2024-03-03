@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { introData } from "@/lib/data";
 import Link from "next/link";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -51,11 +51,28 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium sm:text-4xl !leading-[1.5]"
+        className="mb-10 mt-4 px-4 text-2xl font-medium sm:text-3xl !leading-[1.5]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        {introData.paragraph}
+        <span className="font-bold">
+          Hello, I'm Ben.{" "}
+        </span>
+        <span>
+          I'm a{" "} 
+        </span>
+        <span className="font-bold">
+          Technical Product and Program Manager{" "}
+        </span>
+        <span>
+          with{" "}
+        </span>
+        <span className="font-bold">
+          8 years{" "}
+        </span>
+        <span>
+          of experience. I'm particularly passionate about AI and data products.
+        </span>
       </motion.h1>
 
       <motion.div 

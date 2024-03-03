@@ -108,7 +108,6 @@ export const skillsData = [
 
 export const introData = {
   profileImgUrl: "https://media.licdn.com/dms/image/C5603AQH2di4EIARlqQ/profile-displayphoto-shrink_400_400/0/1599249937678?e=1714608000&v=beta&t=1I9syG66G_vhEBNAL2Q5Xd9vZUwkQAOJqMa8knRZ1B0",
-  paragraph: "Hello, I'm Ben. I'm Technical Program and Product Manager with 8 years of experience.",
   linkedInLink: "https://www.linkedin.com/in/bazampour/",
   githubLink: "https://github.com/Behzad-Az"
 } as const;
