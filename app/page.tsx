@@ -1,4 +1,5 @@
 import AboutMe from "@/components/about-me";
+import Journey from "@/components/journey";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
@@ -14,6 +15,8 @@ export default function Home() {
       <Projects />
       <SectionDivider />
       <Skills />
+      <SectionDivider />
+      <Journey />
     </main>
   );
 }
