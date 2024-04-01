@@ -1,7 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-import { validateString } from "@/lib/utils";
+import { validateString, getErrorMessage } from "@/lib/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -17,12 +17,16 @@ export const sendEmail = async(formData: FormData) => {
     return { error: "Invalid message" };
   }
 
-  resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: process.env.MY_EMAIL_ADDRESS || "",
-    subject: "Message from contact form",
-    reply_to: fromEmail as string,
-    text: message as string
-  });
+  try {
+    await resend.emails.send({
+      from: "Personal Website Contact From <onboarding@resend.dev>",
+      to: process.env.MY_EMAIL_ADDRESS || "",
+      subject: "Message from contact form",
+      reply_to: fromEmail as string,
+      text: message as string
+    });
+  } catch(err: unknown) {
+    return { error: getErrorMessage(err) };
+  }
   
 };
