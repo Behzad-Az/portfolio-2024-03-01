@@ -9,9 +9,13 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section";
 
 export default function Intro() {
   const ref = useSectionInView("Home");
+  const { setActiveSection, setTimeOfLastNavClick } = useActiveSectionContext();
+
+
   return (
     <section ref={ref} id="home" className="max-w-[50rem] text-center scroll-mt-96">
       
@@ -85,13 +89,20 @@ export default function Intro() {
         }}
       >
 
-        <Link href="#contact" className="bg-gray-900 text-white px-7 py-3 flex items-center gap-3 rounded-full outline-none hover:scale-105 hover:bg-gray-950 transition">
+        <Link 
+          href="#contact" 
+          className="bg-gray-900 text-white px-7 py-3 flex items-center gap-3 rounded-full outline-none hover:scale-105 hover:bg-gray-950 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastNavClick(Date.now());
+          }}
+        >
           Contact me here
           <BsArrowRight />
         </Link>
 
         <a 
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-105 transition cursor-pointer border-black-custom"
           href="/CV.pdf"
           download
         >
@@ -100,7 +111,7 @@ export default function Intro() {
         </a>
 
         <a 
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer border border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer border-black-custom"
           href={introData.linkedInLink}
           target="_blank"
         >
@@ -108,7 +119,7 @@ export default function Intro() {
         </a>
 
         <a 
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] outline-none hover:scale-110 transition cursor-pointer border border-black/10"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] outline-none hover:scale-110 transition cursor-pointer border-black-custom"
           href={introData.githubLink}
           target="_blank"
         >
