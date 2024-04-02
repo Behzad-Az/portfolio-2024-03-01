@@ -102,7 +102,7 @@ export default function Intro() {
         </Link>
 
         <a 
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-105 transition cursor-pointer border-black-custom"
+          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-105 transition cursor-pointer border-black-custom dark:bg-white/10"
           href="/CV.pdf"
           download
         >
@@ -111,7 +111,7 @@ export default function Intro() {
         </a>
 
         <a 
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer border-black-custom"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer border-black-custom dark:bg-white/10 dark:text-white/80"
           href={introData.linkedInLink}
           target="_blank"
         >
@@ -119,7 +119,7 @@ export default function Intro() {
         </a>
 
         <a 
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] outline-none hover:scale-110 transition cursor-pointer border-black-custom"
+          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] outline-none hover:scale-110 transition cursor-pointer border-black-custom dark:bg-white/10 dark:text-white/80"
           href={introData.githubLink}
           target="_blank"
         >
