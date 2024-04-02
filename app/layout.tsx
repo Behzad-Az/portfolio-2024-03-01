@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionProvider from "@/context/active-section";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ActiveSectionProvider>
           <Navbar />
           {children}
+          <Toaster position="bottom-center" />
         </ActiveSectionProvider>
       </body>
     </html>
