@@ -2,7 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import { FaAws } from "react-icons/fa";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -128,4 +127,10 @@ export const introData = {
   profileImgUrl: "https://media.licdn.com/dms/image/C5603AQH2di4EIARlqQ/profile-displayphoto-shrink_400_400/0/1599249937678?e=1714608000&v=beta&t=1I9syG66G_vhEBNAL2Q5Xd9vZUwkQAOJqMa8knRZ1B0",
   linkedInLink: "https://www.linkedin.com/in/bazampour/",
   githubLink: "https://github.com/Behzad-Az"
+} as const;
+
+export const profile = {
+  firstName: "Ben",
+  lastName: "Azampour",
+  copyRightYear: 2024
 } as const;
