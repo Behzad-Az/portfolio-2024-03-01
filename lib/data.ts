@@ -35,6 +35,16 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Applied Data Science Bootcamp Program",
+    location: "MIT Professioal Education",
+    description:[
+      "- 12 Week bootcamp with lectures by MIT faculty, hands-on projects and weekly assessments.",
+      "- Data Analysis and Visualization, Linear Regression, Logistic Regression, K-Nearest Neighbors, Deep Learning, Neural Networks, Decision Trees, Random Forests, and Recommendation Systems"
+    ],
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
+  },
+  {
     title: "Product Manager @ Amazon Web Services",
     location: "Seattle, WA",
     description: [
@@ -49,31 +59,62 @@ export const experiencesData = [
     date: "2022 - present"
   },
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Product Management Bootcamp",
+    location: "LinkedIn Learning",
     description:[
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer."
+      "- Agile product management",
+      "- Prioritization methods, sprint planning"
     ],
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2020",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Program Manager @ Imperial Oil (ExxonMobil Affiliate)",
+    location: "Alberta, Canada",
     description:[
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack."
+      "Asset Reliability",
+      "- Managed the reliability program for the mine's $300M loading fleet.",
+      "- Introduced modern data analytics, machine learning, and visualization methods to identify, prioritize and track reliability initiatives.",
+      "- Led $10M of cross-functional reliability projects alongside data science, engineering, and operations teams.",
+      "- Oversaw the change management process.",
+      "- Achieved record fleet reliability at lowest unit maintenance cost in 2020."
     ],
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2018 - 2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Web Development Bootcamp",
+    location: "Lighthouse Labs",
     description: [
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities."
+      "- 12 Week in-person bootcamp with daily lectures daily projects and assessments.",
+      "- Full-stack web development, Javascript, Ruby, CSS, React, React-Native, Node.js, Express, SQL, Algorithms"
     ],
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017",
+  },
+  {
+    title: "Program Manager @ Shell",
+    location: "Alberta, Canada",
+    description:[
+      "Plant Maintenance",
+      "- Optimized $10M of maintenance strategies by applying data analytics, risk analyses, and financial modelling.",
+      "- Launched maintenance performance metrics dashboards.",
+      "- Led cross-functional root cause analyses (RCAs), Failure Mode & Effect Analyses (FMEA), and Change Requests.",
+      "- Produced annual maintenance budgets ($10M scope).",
+      "- Reduced critical downtime by 40%, production loss by 55%, and maintenance expenditure by 30% over three years."
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "2013 - 2016",
+  },
+  {
+    title: "Bachelor of Applied Sciences",
+    location: "University of British Columbia",
+    description: [
+      "Mechatronics engineering w/ minor in commerce and 28 months of diverse internships",
+      "3.4 GPA"
+    ],
+    icon: React.createElement(LuGraduationCap),
+    date: "2013",
   },
 ] as const;
 
@@ -102,25 +143,41 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "Product Management",
+  "Program Management",
+  "Project Management",
+  "Strategy Development",
+  "Metrics & KPIs",
+  "Value Stream Mapping",
+  "Stakeholder Management",
+  "Prioritization",
+  "JIRA",
+  "Asana",
+  "Agile",
+  "Scrum",
+  "Sprints",
+  "Six Sigma",
+  "Data and Insights",
+  "Data Analytics",
+  "Data Science",
+  "Tableau",
+  "Power BI",
+  "Quicksight",
+  "Dashboards",
+  "Pandas",
+  "NumPy",
+  "sklearn",
+  "Machine Learning",
+  "Full Stack Web",
+  "SQL",
+  "Python",
   "JavaScript",
   "TypeScript",
   "React",
+  "React Native",
   "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Figma",
+  "SalesForce"
 ] as const;
 
 export const introData = {
